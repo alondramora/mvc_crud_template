@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h1>This is the homepage!</h1>
+     <!-- /new is a path that our form will follow which will tell it what route to take, our method is a POST method which will CREATE something new ( C in CRUD)-->
+    <form action="/new" method="POST"> 
+    <!-- inputs inside a form so we can package the inputs as a single unit and take them in together -->
+    <!-- <label for=""> will attach to input by referencing the input name in quotation marks -->
+       <label for="textinput">Input Text</label>
+       <input type="text" name="textinput"> <!-- name gets passed to server -->
+       <label for="numinput">Input Number</label>
+       <input type="number" name="numinput" value=0><!-- type of number accepts numeric values only -->
+       <button type="submit">Add Item</button>
+       <!-- buttons of type submit on a form will submit the inputs inside that form, just works! -->
+    </form>
+
+    <!-- list of inputs we submitted-->
+    <ul>
+        <!-- adding ejs later -->
+    </ul>
+</body>
+</html>
