@@ -1,5 +1,4 @@
 //Declare Variables
-const app = require('express');
 const express = require('express');
 const app = express(); // we assign express to a variable called app for easier reference
 const PORT = 8000;
