@@ -4,6 +4,14 @@ const app = express(); // we assign express to a variable called app for easier 
 const PORT = 8000;
 const mongoose = require('mongoose'); // allows us to talk to the mongo database in an easier way
 
+//Import functions/routes
+const connectDB = require('./config/database.js') // imported the location of the database
+
+require('dotenv').config({ path: './config/.env'}) // hey dotenv, here's where my env variables are
+
+// Connect to Database
+connectDB() // calls the function that we created in our database file because we imported it in line 8
+
 //Set Middleware
 app.set('view engine', 'ejs'); // setting the view engine, this is built into express
 // we don't have to use ejs for our view engine, we can use things like react as well
