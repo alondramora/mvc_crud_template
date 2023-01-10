@@ -24,7 +24,14 @@
 
     <!-- list of inputs we submitted-->
     <ul>
-        <!-- adding ejs later -->
+        <% itemList.forEach(item => { %>
+        <li>
+            <div><%= item.textinput %></div>
+            <div><%= item.numinput %></div>
+            <a href="#">Edit</a>
+            <a href="#">Remove</a>
+        </li>
+        <% }) %>
     </ul>
 </body>
 </html>
