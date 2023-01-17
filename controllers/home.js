@@ -4,7 +4,7 @@ module.exports = {
     getIndex: async (req, res) => { // gets home page
         try {
             const items = await ItemList.find(); // return all of the items in ItemList collection from mongodb
-            res.render('index.ejs', { itemList: items }); // renders the home page, and sending the entire collection of items in a bundle to render inside of ejs
+            res.render('index.ejs', { itemList: items }); // renders the home page, and sending the entire collection of items in a bundle to render inside of ejs. itemList here is equal to const itemList = items. It's just the name you'll be referencing in your views to get the items collection from DB
         } catch (err){
             if (err) return res.status(500).send(err); // if we get an error it will display in the browser
         }

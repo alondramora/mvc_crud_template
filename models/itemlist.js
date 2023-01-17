@@ -16,7 +16,7 @@ const itemListSchema = new mongoose.Schema({
     }
 });
 
-//takes the blueprint we created and specifies 3 params
+//takes the blueprint we created and specifies 3 params, we export the model so we can import in diff parts of our project
 module.exports = mongoose.model('ItemList', itemListSchema, 'items')
 //1. name we will be referring to our schema in our controller and project (see home controller) line 1
 //2. name of the schema on line 4

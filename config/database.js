@@ -8,6 +8,7 @@ const connectDB = async () => {
     } catch (err) { // if something goes wrong, catch the error and do something with it 
         console.log(err);
         process.exit(1) // exit the function
+        // The process.exit() method is used to end the process which is running at the same time with an exit code in NodeJS.
     }
 }
 
